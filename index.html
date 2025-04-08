@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Transform your digital presence with our innovative digital marketing solutions. SEO, PPC, Social Media Marketing, and more.">
+    <meta name="keywords" content="digital marketing, SEO, PPC, social media marketing, digital agency">
+    <meta name="author" content="Digital Agency">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <meta property="og:title" content="Digital Marketing Agency">
+    <meta property="og:description" content="Transform your digital presence with our innovative digital marketing solutions.">
+    <meta property="og:image" content="https://yourdomain.com/images/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourdomain.com/">
+    <meta property="twitter:title" content="Digital Marketing Agency">
+    <meta property="twitter:description" content="Transform your digital presence with our innovative digital marketing solutions.">
+    <meta property="twitter:image" content="https://yourdomain.com/images/twitter-image.jpg">
+
+    <title>Digital Marketing Agency - Transform Your Digital Presence</title>
+
+    <!-- Preload critical assets -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="js/main.js" as="script">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-[Poppins] bg-white text-gray-800">
+    <!-- Loading Spinner -->
+    <div id="loader" class="fixed inset-0 z-50 flex items-center justify-center bg-white">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu fixed inset-y-0 left-0 w-64 bg-[#0A2647] z-50 md:hidden">
+        <div class="p-4">
+            <button class="close-menu text-white text-2xl float-right" aria-label="Close menu">
+                <i class="fas fa-times"></i>
+            </button>
+            <ul class="mt-12 space-y-4">
+                <li><a href="index.html" class="text-[#00FFA3] block py-2">Home</a></li>
+                <li><a href="services.html" class="text-white hover:text-[#00FFA3] block py-2">Services</a></li>
+                <li><a href="portfolio.html" class="text-white hover:text-[#00FFA3] block py-2">Portfolio</a></li>
+                <li><a href="careers.html" class="text-white hover:text-[#00FFA3] block py-2">Careers</a></li>
+                <li><a href="about.html" class="text-white hover:text-[#00FFA3] block py-2">About Us</a></li>
+                <li><a href="blog.html" class="text-white hover:text-[#00FFA3] block py-2">Blog</a></li>
+                <li><a href="contact.html" class="text-white hover:text-[#00FFA3] block py-2">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-40 bg-[#0A2647]/95 backdrop-blur">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-white text-2xl font-bold">
+                    Digital<span class="text-[#00FFA3]">Agency</span>
+                </a>
+                <ul class="hidden md:flex space-x-8">
+                    <li><a href="index.html" class="text-[#00FFA3] font-medium">Home</a></li>
+                    <li><a href="services.html" class="text-white hover:text-[#00FFA3] transition-colors">Services</a></li>
+                    <li><a href="portfolio.html" class="text-white hover:text-[#00FFA3] transition-colors">Portfolio</a></li>
+                    <li><a href="careers.html" class="text-white hover:text-[#00FFA3] transition-colors">Careers</a></li>
+                    <li><a href="about.html" class="text-white hover:text-[#00FFA3] transition-colors">About Us</a></li>
+                    <li><a href="blog.html" class="text-white hover:text-[#00FFA3] transition-colors">Blog</a></li>
+                    <li><a href="contact.html" class="text-white hover:text-[#00FFA3] transition-colors">Contact</a></li>
+                </ul>
+                <button class="md:hidden text-white open-menu" aria-label="Open menu">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex items-center bg-[#0A2647]">
+            <div class="absolute inset-0 overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-r from-[#0A2647] to-transparent"></div>
+                <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg" 
+                     alt="Digital Marketing Team" 
+                     class="w-full h-full object-cover opacity-20 lazy-image"
+                     loading="lazy"
+                     width="1920"
+                     height="1080">
+            </div>
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="max-w-3xl fade-in">
+                    <h1 class="text-5xl md:text-6xl font-bold text-white mb-6">
+                        Transform Your Digital Presence with 
+                        <span class="gradient-text">Innovation</span>
+                    </h1>
+                    <p class="text-xl text-gray-300 mb-8">
+                        450+ Campaigns Managed | 98% Client Retention | Award-Winning Agency
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#services" 
+                           class="btn px-8 py-4 bg-[#00FFA3] text-gray-900 rounded-full font-semibold hover:bg-[#00FFA3]/90 transition-colors">
+                            Get Started
+                        </a>
+                        <a href="#portfolio" 
+                           class="btn px-8 py-4 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-gray-900 transition-colors">
+                            View Portfolio
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="py-20 bg-white" id="stats">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="text-center fade-in hover-card" data-delay="0">
+                        <div class="text-4xl font-bold text-[#0A2647] mb-2 counter" data-target="450">0</div>
+                        <div class="text-gray-600">Campaigns Managed</div>
+                    </div>
+                    <div class="text-center fade-in hover-card" data-delay="200">
+                        <div class="text-4xl font-bold text-[#0A2647] mb-2 counter" data-target="98">0</div>
+                        <div class="text-gray-600">Client Retention %</div>
+                    </div>
+                    <div class="text-center fade-in hover-card" data-delay="400">
+                        <div class="text-4xl font-bold text-[#0A2647] mb-2 counter" data-target="50">0</div>
+                        <div class="text-gray-600">Team Members</div>
+                    </div>
+                    <div class="text-center fade-in hover-card" data-delay="600">
+                        <div class="text-4xl font-bold text-[#0A2647] mb-2 counter" data-target="25">0</div>
+                        <div class="text-gray-600">Industry Awards</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="py-20 bg-gray-50" id="services">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center mb-16">Our Services</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all hover-card">
+                        <div class="w-16 h-16 bg-[#00FFA3]/10 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-search text-[#00FFA3] text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">SEO Optimization</h3>
+                        <p class="text-gray-600">Boost your website's visibility and rank higher in search results.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all hover-card">
+                        <div class="w-16 h-16 bg-[#00FFA3]/10 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-ad text-[#00FFA3] text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">PPC Management</h3>
+                        <p class="text-gray-600">Maximize ROI with targeted paid advertising campaigns.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all hover-card">
+                        <div class="w-16 h-16 bg-[#00FFA3]/10 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-share-alt text-[#00FFA3] text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Social Media</h3>
+                        <p class="text-gray-600">Engage your audience across all social platforms.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-[#0A2647]">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-4xl font-bold text-white mb-8">Ready to Grow Your Business?</h2>
+                <p class="text-xl text-gray-300 mb-8">Let's create something amazing together</p>
+                <a href="contact.html" 
+                   class="btn px-8 py-4 bg-[#00FFA3] text-gray-900 rounded-full font-semibold hover:bg-[#00FFA3]/90 transition-colors">
+                    Get Started Now
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#0A2647] text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Digital<span class="text-[#00FFA3]">Agency</span></h3>
+                    <p class="text-gray-400">Transform your digital presence with our innovative solutions.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-[#00FFA3]">About Us</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-[#00FFA3]">Services</a></li>
+                        <li><a href="portfolio.html" class="text-gray-400 hover:text-[#00FFA3]">Portfolio</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-[#00FFA3]">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-[#00FFA3]"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-[#00FFA3]"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-[#00FFA3]"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-[#00FFA3]"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Newsletter</h4>
+                    <form class="space-y-4">
+                        <input type="email" 
+                               placeholder="Enter your email" 
+                               class="w-full px-4 py-2 bg-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00FFA3]">
+                        <button type="submit" 
+                                class="w-full px-4 py-2 bg-[#00FFA3] text-gray-900 rounded-lg font-semibold hover:bg-[#00FFA3]/90">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-white/10 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Digital Marketing Agency. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script>
+        // Remove loader when page is loaded
+        window.addEventListener('load', () => {
+            document.getElementById('loader').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
