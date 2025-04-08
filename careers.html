@@ -7,16 +7,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        .gradient-text {
-            background: linear-gradient(45deg, #00FFA3, #4B79A1);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="font-[Poppins] bg-white text-gray-800">
-    <header class="fixed w-full top-0 z-50 bg-[#0A2647]/95 backdrop-blur-sm">
+    <!-- Header and Navigation -->
+    <header class="fixed w-full top-0 z-40 bg-[#0A2647]/95 backdrop-blur">
         <nav class="container mx-auto px-4 py-4">
             <div class="flex justify-between items-center">
                 <a href="index.html" class="text-white text-2xl font-bold">
@@ -31,16 +26,37 @@
                     <li><a href="blog.html" class="text-white hover:text-[#00FFA3] transition-colors">Blog</a></li>
                     <li><a href="contact.html" class="text-white hover:text-[#00FFA3] transition-colors">Contact</a></li>
                 </ul>
+                <button class="md:hidden text-white open-menu" aria-label="Open menu">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
             </div>
         </nav>
     </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu fixed inset-y-0 left-0 w-64 bg-[#0A2647] z-50 md:hidden">
+        <div class="p-4">
+            <button class="close-menu text-white text-2xl float-right" aria-label="Close menu">
+                <i class="fas fa-times"></i>
+            </button>
+            <ul class="mt-12 space-y-4">
+                <li><a href="index.html" class="text-white hover:text-[#00FFA3] block py-2">Home</a></li>
+                <li><a href="services.html" class="text-white hover:text-[#00FFA3] block py-2">Services</a></li>
+                <li><a href="portfolio.html" class="text-white hover:text-[#00FFA3] block py-2">Portfolio</a></li>
+                <li><a href="careers.html" class="text-[#00FFA3] block py-2">Careers</a></li>
+                <li><a href="about.html" class="text-white hover:text-[#00FFA3] block py-2">About Us</a></li>
+                <li><a href="blog.html" class="text-white hover:text-[#00FFA3] block py-2">Blog</a></li>
+                <li><a href="contact.html" class="text-white hover:text-[#00FFA3] block py-2">Contact</a></li>
+            </ul>
+        </div>
+    </div>
 
     <main class="pt-20">
         <!-- Hero Section -->
         <section class="relative py-20 bg-[#0A2647]">
             <div class="absolute inset-0 overflow-hidden">
                 <div class="absolute inset-0 bg-gradient-to-r from-[#0A2647] to-transparent"></div>
-                <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg" 
+                <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg" 
                      alt="Careers Background" 
                      class="w-full h-full object-cover opacity-20">
             </div>
@@ -48,133 +64,154 @@
                 <h1 class="text-5xl font-bold text-white mb-6">
                     Join Our <span class="gradient-text">Team</span>
                 </h1>
-                <p class="text-xl text-gray-300 mb-8">
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">
                     Be part of a dynamic team shaping the future of digital marketing
                 </p>
             </div>
         </section>
 
-        <!-- Benefits Section -->
-        <section class="py-20 bg-gray-50">
+        <!-- Why Work With Us -->
+        <section class="py-20 bg-white">
             <div class="container mx-auto px-4">
                 <h2 class="text-4xl font-bold text-center mb-16">Why Work With Us?</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+                    <div class="text-center p-6 hover-card">
                         <div class="w-16 h-16 bg-[#00FFA3]/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i class="fas fa-laptop text-[#00FFA3] text-2xl"></i>
+                            <i class="fas fa-rocket text-[#00FFA3] text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-4">Remote Work</h3>
-                        <p class="text-gray-600">Flexible work arrangements to maintain work-life balance</p>
+                        <h3 class="text-xl font-bold mb-4">Growth Opportunities</h3>
+                        <p class="text-gray-600">Continuous learning and career advancement opportunities.</p>
                     </div>
-                    <div class="bg-white p-8 rounded-xl shadow-lg text-center">
-                        <div class="w-16 h-16 bg-[#00FFA3]/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i class="fas fa-chart-line text-[#00FFA3] text-2xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-4">Career Growth</h3>
-                        <p class="text-gray-600">Continuous learning and development opportunities</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+                    <div class="text-center p-6 hover-card">
                         <div class="w-16 h-16 bg-[#00FFA3]/10 rounded-full flex items-center justify-center mx-auto mb-6">
                             <i class="fas fa-users text-[#00FFA3] text-2xl"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-4">Great Culture</h3>
-                        <p class="text-gray-600">Collaborative and inclusive work environment</p>
+                        <p class="text-gray-600">Collaborative environment with talented professionals.</p>
+                    </div>
+                    <div class="text-center p-6 hover-card">
+                        <div class="w-16 h-16 bg-[#00FFA3]/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-gift text-[#00FFA3] text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Amazing Benefits</h3>
+                        <p class="text-gray-600">Competitive salary and comprehensive benefits package.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Open Positions -->
-        <section class="py-20" id="openings">
+        <section class="py-20 bg-gray-50">
             <div class="container mx-auto px-4">
                 <h2 class="text-4xl font-bold text-center mb-16">Open Positions</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                        <div class="flex justify-between items-start mb-6">
+                <div class="grid grid-cols-1 gap-8 max-w-4xl mx-auto">
+                    <!-- Position 1 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover-card">
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
                             <div>
-                                <h3 class="text-2xl font-bold mb-2">Senior SEO Specialist</h3>
-                                <p class="text-gray-600">Full-time · Remote</p>
+                                <h3 class="text-xl font-bold mb-2">Senior Digital Marketing Manager</h3>
+                                <p class="text-gray-600">Full Time • Remote</p>
                             </div>
-                            <span class="px-4 py-2 bg-[#00FFA3]/10 text-[#00FFA3] rounded-full">
-                                $60K - $80K
-                            </span>
+                            <button onclick="showApplicationForm('Senior Digital Marketing Manager')" 
+                                    class="mt-4 md:mt-0 px-6 py-2 bg-[#00FFA3] text-gray-900 rounded-full font-semibold hover:bg-[#00FFA3]/90 transition-colors">
+                                Apply Now
+                            </button>
                         </div>
-                        <p class="text-gray-600 mb-6">
-                            Lead SEO strategies and optimize client websites for maximum visibility.
-                        </p>
-                        <button class="px-6 py-3 bg-[#00FFA3] text-gray-900 rounded-lg font-semibold hover:bg-[#00FFA3]/90 transition-colors">
-                            Apply Now
-                        </button>
+                        <p class="text-gray-600 mb-4">Lead digital marketing strategies and campaigns for our clients.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">Digital Marketing</span>
+                            <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">Leadership</span>
+                            <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">Strategy</span>
+                        </div>
                     </div>
 
-                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                        <div class="flex justify-between items-start mb-6">
+                    <!-- Position 2 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover-card">
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
                             <div>
-                                <h3 class="text-2xl font-bold mb-2">Digital Marketing Manager</h3>
-                                <p class="text-gray-600">Full-time · Hybrid</p>
+                                <h3 class="text-xl font-bold mb-2">SEO Specialist</h3>
+                                <p class="text-gray-600">Full Time • Hybrid</p>
                             </div>
-                            <span class="px-4 py-2 bg-[#00FFA3]/10 text-[#00FFA3] rounded-full">
-                                $70K - $90K
-                            </span>
+                            <button onclick="showApplicationForm('SEO Specialist')" 
+                                    class="mt-4 md:mt-0 px-6 py-2 bg-[#00FFA3] text-gray-900 rounded-full font-semibold hover:bg-[#00FFA3]/90 transition-colors">
+                                Apply Now
+                            </button>
                         </div>
-                        <p class="text-gray-600 mb-6">
-                            Develop and execute comprehensive digital marketing strategies.
-                        </p>
-                        <button class="px-6 py-3 bg-[#00FFA3] text-gray-900 rounded-lg font-semibold hover:bg-[#00FFA3]/90 transition-colors">
-                            Apply Now
-                        </button>
+                        <p class="text-gray-600 mb-4">Develop and implement SEO strategies to improve client rankings.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">SEO</span>
+                            <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">Analytics</span>
+                            <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">Content</span>
+                        </div>
                     </div>
 
-                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                        <div class="flex justify-between items-start mb-6">
+                    <!-- Position 3 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover-card">
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
                             <div>
-                                <h3 class="text-2xl font-bold mb-2">Content Writer</h3>
-                                <p class="text-gray-600">Full-time · Remote</p>
+                                <h3 class="text-xl font-bold mb-2">Social Media Manager</h3>
+                                <p class="text-gray-600">Full Time • On-site</p>
                             </div>
-                            <span class="px-4 py-2 bg-[#00FFA3]/10 text-[#00FFA3] rounded-full">
-                                $50K - $70K
-                            </span>
+                            <button onclick="showApplicationForm('Social Media Manager')" 
+                                    class="mt-4 md:mt-0 px-6 py-2 bg-[#00FFA3] text-gray-900 rounded-full font-semibold hover:bg-[#00FFA3]/90 transition-colors">
+                                Apply Now
+                            </button>
                         </div>
-                        <p class="text-gray-600 mb-6">
-                            Create engaging content for various digital marketing campaigns.
-                        </p>
-                        <button class="px-6 py-3 bg-[#00FFA3] text-gray-900 rounded-lg font-semibold hover:bg-[#00FFA3]/90 transition-colors">
-                            Apply Now
-                        </button>
-                    </div>
-
-                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                        <div class="flex justify-between items-start mb-6">
-                            <div>
-                                <h3 class="text-2xl font-bold mb-2">PPC Specialist</h3>
-                                <p class="text-gray-600">Full-time · Remote</p>
-                            </div>
-                            <span class="px-4 py-2 bg-[#00FFA3]/10 text-[#00FFA3] rounded-full">
-                                $55K - $75K
-                            </span>
+                        <p class="text-gray-600 mb-4">Create and manage social media content and campaigns.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">Social Media</span>
+                            <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">Content Creation</span>
+                            <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">Community</span>
                         </div>
-                        <p class="text-gray-600 mb-6">
-                            Manage and optimize paid advertising campaigns across platforms.
-                        </p>
-                        <button class="px-6 py-3 bg-[#00FFA3] text-gray-900 rounded-lg font-semibold hover:bg-[#00FFA3]/90 transition-colors">
-                            Apply Now
-                        </button>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CTA Section -->
-        <section class="py-20 bg-[#0A2647]">
-            <div class="container mx-auto px-4 text-center">
-                <h2 class="text-4xl font-bold text-white mb-8">Don't See the Right Fit?</h2>
-                <p class="text-xl text-gray-300 mb-8">Send us your resume for future opportunities</p>
-                <a href="contact.html" 
-                   class="inline-block px-8 py-4 bg-[#00FFA3] text-gray-900 rounded-full font-semibold hover:bg-[#00FFA3]/90 transition-colors">
-                    Contact Us
-                </a>
+        <!-- Application Form Modal -->
+        <div id="applicationModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+            <div class="container mx-auto px-4 h-full flex items-center justify-center">
+                <div class="bg-white rounded-xl p-8 max-w-2xl w-full max-h-[80vh] overflow-y-auto">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 id="modalTitle" class="text-2xl font-bold"></h2>
+                        <button onclick="closeApplicationForm()" class="text-gray-500 hover:text-gray-700">
+                            <i class="fas fa-times text-2xl"></i>
+                        </button>
+                    </div>
+                    <form id="applicationForm" class="space-y-6" onsubmit="submitApplication(event)">
+                        <div>
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Full Name</label>
+                            <input type="text" id="name" name="name" required
+                                   class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00FFA3]">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                            <input type="email" id="email" name="email" required
+                                   class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00FFA3]">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-gray-700 font-medium mb-2">Phone</label>
+                            <input type="tel" id="phone" name="phone" required
+                                   class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00FFA3]">
+                        </div>
+                        <div>
+                            <label for="resume" class="block text-gray-700 font-medium mb-2">Resume</label>
+                            <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required
+                                   class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00FFA3]">
+                        </div>
+                        <div>
+                            <label for="coverLetter" class="block text-gray-700 font-medium mb-2">Cover Letter</label>
+                            <textarea id="coverLetter" name="coverLetter" rows="4" required
+                                      class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00FFA3]"></textarea>
+                        </div>
+                        <button type="submit" 
+                                class="w-full px-6 py-3 bg-[#00FFA3] text-gray-900 rounded-lg font-semibold hover:bg-[#00FFA3]/90 transition-colors">
+                            Submit Application
+                        </button>
+                    </form>
+                </div>
             </div>
-        </section>
+        </div>
     </main>
 
     <footer class="bg-[#0A2647] text-white py-16">
@@ -220,5 +257,40 @@
             </div>
         </div>
     </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Application form functionality
+        function showApplicationForm(position) {
+            const modal = document.getElementById('applicationModal');
+            document.getElementById('modalTitle').textContent = `Apply for ${position}`;
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeApplicationForm() {
+            const modal = document.getElementById('applicationModal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = '';
+            document.getElementById('applicationForm').reset();
+        }
+
+        function submitApplication(event) {
+            event.preventDefault();
+            // Here you would typically send the form data to your server
+            alert('Application submitted successfully!');
+            closeApplicationForm();
+        }
+
+        // Close modal on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeApplicationForm();
+        });
+
+        // Close modal when clicking outside
+        document.getElementById('applicationModal').addEventListener('click', (e) => {
+            if (e.target === e.currentTarget) closeApplicationForm();
+        });
+    </script>
 </body>
 </html>
