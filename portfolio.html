@@ -7,27 +7,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
     <style>
-        .gradient-text {
-            background: linear-gradient(45deg, #00FFA3, #4B79A1);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
         .portfolio-item {
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
         }
-        .portfolio-item:hover {
-            transform: translateY(-10px);
+        .portfolio-item.hidden {
+            display: none;
         }
-        .filter-button.active {
+        .filter-btn.active {
             background-color: #00FFA3;
             color: #0A2647;
         }
     </style>
 </head>
 <body class="font-[Poppins] bg-white text-gray-800">
-    <header class="fixed w-full top-0 z-50 bg-[#0A2647]/95 backdrop-blur-sm">
-        <!-- Navigation Bar -->
+    <!-- Header and Navigation -->
+    <header class="fixed w-full top-0 z-40 bg-[#0A2647]/95 backdrop-blur">
         <nav class="container mx-auto px-4 py-4">
             <div class="flex justify-between items-center">
                 <a href="index.html" class="text-white text-2xl font-bold">
@@ -42,31 +38,47 @@
                     <li><a href="blog.html" class="text-white hover:text-[#00FFA3] transition-colors">Blog</a></li>
                     <li><a href="contact.html" class="text-white hover:text-[#00FFA3] transition-colors">Contact</a></li>
                 </ul>
-                <button class="md:hidden text-white">
+                <button class="md:hidden text-white open-menu" aria-label="Open menu">
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
             </div>
         </nav>
     </header>
 
+    <!-- Mobile Menu -->
+    <div class="mobile-menu fixed inset-y-0 left-0 w-64 bg-[#0A2647] z-50 md:hidden">
+        <div class="p-4">
+            <button class="close-menu text-white text-2xl float-right" aria-label="Close menu">
+                <i class="fas fa-times"></i>
+            </button>
+            <ul class="mt-12 space-y-4">
+                <li><a href="index.html" class="text-white hover:text-[#00FFA3] block py-2">Home</a></li>
+                <li><a href="services.html" class="text-white hover:text-[#00FFA3] block py-2">Services</a></li>
+                <li><a href="portfolio.html" class="text-[#00FFA3] block py-2">Portfolio</a></li>
+                <li><a href="careers.html" class="text-white hover:text-[#00FFA3] block py-2">Careers</a></li>
+                <li><a href="about.html" class="text-white hover:text-[#00FFA3] block py-2">About Us</a></li>
+                <li><a href="blog.html" class="text-white hover:text-[#00FFA3] block py-2">Blog</a></li>
+                <li><a href="contact.html" class="text-white hover:text-[#00FFA3] block py-2">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
     <main class="pt-20">
         <!-- Hero Section -->
         <section class="relative py-20 bg-[#0A2647]">
             <div class="absolute inset-0 overflow-hidden">
                 <div class="absolute inset-0 bg-gradient-to-r from-[#0A2647] to-transparent"></div>
-                <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg" 
+                <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg" 
                      alt="Portfolio Background" 
                      class="w-full h-full object-cover opacity-20">
             </div>
-            <div class="container mx-auto px-4 relative z-10">
-                <div class="max-w-3xl mx-auto text-center">
-                    <h1 class="text-5xl font-bold text-white mb-6">
-                        Our <span class="gradient-text">Portfolio</span>
-                    </h1>
-                    <p class="text-xl text-gray-300">
-                        Showcasing our best work and success stories
-                    </p>
-                </div>
+            <div class="container mx-auto px-4 relative z-10 text-center">
+                <h1 class="text-5xl font-bold text-white mb-6">
+                    Our <span class="gradient-text">Portfolio</span>
+                </h1>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                    Showcasing our best work and success stories
+                </p>
             </div>
         </section>
 
@@ -74,213 +86,80 @@
         <section class="py-12 bg-gray-50">
             <div class="container mx-auto px-4">
                 <div class="flex flex-wrap justify-center gap-4 mb-12">
-                    <button class="filter-button active px-6 py-2 rounded-full border-2 border-[#00FFA3] font-medium">
+                    <button class="filter-btn active px-6 py-2 rounded-full border-2 border-[#00FFA3] hover:bg-[#00FFA3] hover:text-[#0A2647] transition-colors" data-filter="all">
                         All Projects
                     </button>
-                    <button class="filter-button px-6 py-2 rounded-full border-2 border-[#00FFA3] text-gray-700 hover:bg-[#00FFA3] hover:text-gray-900 transition-colors">
+                    <button class="filter-btn px-6 py-2 rounded-full border-2 border-[#00FFA3] hover:bg-[#00FFA3] hover:text-[#0A2647] transition-colors" data-filter="e-commerce">
                         E-commerce
                     </button>
-                    <button class="filter-button px-6 py-2 rounded-full border-2 border-[#00FFA3] text-gray-700 hover:bg-[#00FFA3] hover:text-gray-900 transition-colors">
+                    <button class="filter-btn px-6 py-2 rounded-full border-2 border-[#00FFA3] hover:bg-[#00FFA3] hover:text-[#0A2647] transition-colors" data-filter="healthcare">
                         Healthcare
                     </button>
-                    <button class="filter-button px-6 py-2 rounded-full border-2 border-[#00FFA3] text-gray-700 hover:bg-[#00FFA3] hover:text-gray-900 transition-colors">
+                    <button class="filter-btn px-6 py-2 rounded-full border-2 border-[#00FFA3] hover:bg-[#00FFA3] hover:text-[#0A2647] transition-colors" data-filter="technology">
                         Technology
                     </button>
                 </div>
-            </div>
-        </section>
 
-        <!-- Portfolio Grid -->
-        <section class="py-20">
-            <div class="container mx-auto px-4">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Portfolio Item 1 -->
-                    <div class="portfolio-item bg-white rounded-xl shadow-lg overflow-hidden">
+                    <!-- E-commerce Project -->
+                    <div class="portfolio-item bg-white rounded-xl shadow-lg overflow-hidden" data-category="e-commerce">
                         <img src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg" 
                              alt="E-commerce Project" 
                              class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <div class="flex items-center justify-between mb-4">
-                                <span class="px-3 py-1 bg-[#00FFA3]/10 text-[#00FFA3] rounded-full text-sm">
-                                    E-commerce
-                                </span>
-                                <div class="flex items-center">
-                                    <i class="fas fa-chart-line text-[#00FFA3] mr-2"></i>
-                                    <span class="text-gray-600">+300% Growth</span>
-                                </div>
-                            </div>
-                            <h3 class="text-xl font-bold mb-2">Fashion E-commerce Platform</h3>
-                            <p class="text-gray-600 mb-4">
-                                Complete digital transformation resulting in 300% increase in online sales.
-                            </p>
-                            <a href="#" class="text-[#00FFA3] font-semibold hover:text-[#00FFA3]/80">
+                            <h3 class="text-xl font-bold mb-2">Online Fashion Store</h3>
+                            <p class="text-gray-600 mb-4">Complete e-commerce solution with 200% increase in online sales.</p>
+                            <button onclick="showCaseStudy('e-commerce-1')" class="text-[#00FFA3] font-semibold hover:text-[#00FFA3]/80">
                                 View Case Study <i class="fas fa-arrow-right ml-2"></i>
-                            </a>
+                            </button>
                         </div>
                     </div>
 
-                    <!-- Portfolio Item 2 -->
-                    <div class="portfolio-item bg-white rounded-xl shadow-lg overflow-hidden">
-                        <img src="https://images.pexels.com/photos/1170979/pexels-photo-1170979.jpeg" 
+                    <!-- Healthcare Project -->
+                    <div class="portfolio-item bg-white rounded-xl shadow-lg overflow-hidden" data-category="healthcare">
+                        <img src="https://images.pexels.com/photos/3182777/pexels-photo-3182777.jpeg" 
                              alt="Healthcare Project" 
                              class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <div class="flex items-center justify-between mb-4">
-                                <span class="px-3 py-1 bg-[#00FFA3]/10 text-[#00FFA3] rounded-full text-sm">
-                                    Healthcare
-                                </span>
-                                <div class="flex items-center">
-                                    <i class="fas fa-user-plus text-[#00FFA3] mr-2"></i>
-                                    <span class="text-gray-600">150% Engagement</span>
-                                </div>
-                            </div>
-                            <h3 class="text-xl font-bold mb-2">Medical Center Campaign</h3>
-                            <p class="text-gray-600 mb-4">
-                                Digital marketing campaign increasing patient engagement by 150%.
-                            </p>
-                            <a href="#" class="text-[#00FFA3] font-semibold hover:text-[#00FFA3]/80">
+                            <h3 class="text-xl font-bold mb-2">Medical Center Website</h3>
+                            <p class="text-gray-600 mb-4">Modern healthcare platform with patient portal integration.</p>
+                            <button onclick="showCaseStudy('healthcare-1')" class="text-[#00FFA3] font-semibold hover:text-[#00FFA3]/80">
                                 View Case Study <i class="fas fa-arrow-right ml-2"></i>
-                            </a>
+                            </button>
                         </div>
                     </div>
 
-                    <!-- Portfolio Item 3 -->
-                    <div class="portfolio-item bg-white rounded-xl shadow-lg overflow-hidden">
-                        <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg" 
-                             alt="Tech Startup Project" 
+                    <!-- Technology Project -->
+                    <div class="portfolio-item bg-white rounded-xl shadow-lg overflow-hidden" data-category="technology">
+                        <img src="https://images.pexels.com/photos/3182811/pexels-photo-3182811.jpeg" 
+                             alt="Technology Project" 
                              class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <div class="flex items-center justify-between mb-4">
-                                <span class="px-3 py-1 bg-[#00FFA3]/10 text-[#00FFA3] rounded-full text-sm">
-                                    Technology
-                                </span>
-                                <div class="flex items-center">
-                                    <i class="fas fa-rocket text-[#00FFA3] mr-2"></i>
-                                    <span class="text-gray-600">500% ROI</span>
-                                </div>
-                            </div>
-                            <h3 class="text-xl font-bold mb-2">Tech Startup Launch</h3>
-                            <p class="text-gray-600 mb-4">
-                                Successful product launch achieving 500% ROI in first quarter.
-                            </p>
-                            <a href="#" class="text-[#00FFA3] font-semibold hover:text-[#00FFA3]/80">
+                            <h3 class="text-xl font-bold mb-2">Tech Startup Platform</h3>
+                            <p class="text-gray-600 mb-4">Innovative SaaS platform with modern UI/UX design.</p>
+                            <button onclick="showCaseStudy('tech-1')" class="text-[#00FFA3] font-semibold hover:text-[#00FFA3]/80">
                                 View Case Study <i class="fas fa-arrow-right ml-2"></i>
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Stats Section -->
-        <section class="py-20 bg-gray-50">
-            <div class="container mx-auto px-4">
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-                    <div>
-                        <div class="text-4xl font-bold text-[#0A2647] mb-2">100+</div>
-                        <div class="text-gray-600">Projects Completed</div>
+        <!-- Case Study Modal -->
+        <div id="caseStudyModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+            <div class="container mx-auto px-4 h-full flex items-center justify-center">
+                <div class="bg-white rounded-xl p-8 max-w-2xl w-full max-h-[80vh] overflow-y-auto">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 id="modalTitle" class="text-2xl font-bold"></h2>
+                        <button onclick="closeCaseStudy()" class="text-gray-500 hover:text-gray-700">
+                            <i class="fas fa-times text-2xl"></i>
+                        </button>
                     </div>
-                    <div>
-                        <div class="text-4xl font-bold text-[#0A2647] mb-2">95%</div>
-                        <div class="text-gray-600">Success Rate</div>
-                    </div>
-                    <div>
-                        <div class="text-4xl font-bold text-[#0A2647] mb-2">$50M+</div>
-                        <div class="text-gray-600">Revenue Generated</div>
-                    </div>
-                    <div>
-                        <div class="text-4xl font-bold text-[#0A2647] mb-2">48hrs</div>
-                        <div class="text-gray-600">Average Response Time</div>
-                    </div>
+                    <div id="modalContent"></div>
                 </div>
             </div>
-        </section>
-
-        <!-- Testimonials -->
-        <section class="py-20">
-            <div class="container mx-auto px-4">
-                <h2 class="text-4xl font-bold text-center mb-16">Client Testimonials</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-white p-8 rounded-xl shadow-lg">
-                        <div class="flex items-center mb-6">
-                            <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg" 
-                                 alt="Client" 
-                                 class="w-12 h-12 rounded-full object-cover mr-4">
-                            <div>
-                                <h4 class="font-bold">Sarah Johnson</h4>
-                                <p class="text-gray-600">CEO, TechStart Inc.</p>
-                            </div>
-                        </div>
-                        <p class="text-gray-600 mb-4">
-                            "The results exceeded our expectations. Our online presence has never been stronger."
-                        </p>
-                        <div class="text-[#00FFA3]">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-
-                    <div class="bg-white p-8 rounded-xl shadow-lg">
-                        <div class="flex items-center mb-6">
-                            <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" 
-                                 alt="Client" 
-                                 class="w-12 h-12 rounded-full object-cover mr-4">
-                            <div>
-                                <h4 class="font-bold">Michael Chen</h4>
-                                <p class="text-gray-600">Marketing Director, HealthPlus</p>
-                            </div>
-                        </div>
-                        <p class="text-gray-600 mb-4">
-                            "Professional team that delivered outstanding results for our healthcare campaign."
-                        </p>
-                        <div class="text-[#00FFA3]">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-
-                    <div class="bg-white p-8 rounded-xl shadow-lg">
-                        <div class="flex items-center mb-6">
-                            <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg" 
-                                 alt="Client" 
-                                 class="w-12 h-12 rounded-full object-cover mr-4">
-                            <div>
-                                <h4 class="font-bold">Emily Rodriguez</h4>
-                                <p class="text-gray-600">Founder, StyleCo</p>
-                            </div>
-                        </div>
-                        <p class="text-gray-600 mb-4">
-                            "Their e-commerce expertise transformed our online store completely."
-                        </p>
-                        <div class="text-[#00FFA3]">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section class="py-20 bg-[#0A2647]">
-            <div class="container mx-auto px-4 text-center">
-                <h2 class="text-4xl font-bold text-white mb-8">Ready to Start Your Success Story?</h2>
-                <p class="text-xl text-gray-300 mb-8">Let's create something amazing together</p>
-                <a href="contact.html" 
-                   class="inline-block px-8 py-4 bg-[#00FFA3] text-gray-900 rounded-full font-semibold hover:bg-[#00FFA3]/90 transition-colors">
-                    Start Your Project
-                </a>
-            </div>
-        </section>
+        </div>
     </main>
 
     <footer class="bg-[#0A2647] text-white py-16">
@@ -327,14 +206,160 @@
         </div>
     </footer>
 
+    <script src="js/main.js"></script>
     <script>
-        // Portfolio Filter Functionality
-        const filterButtons = document.querySelectorAll('.filter-button');
-        filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
+        // Portfolio filtering
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    btn.classList.add('active');
+
+                    const filter = btn.getAttribute('data-filter');
+
+                    portfolioItems.forEach(item => {
+                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                            item.classList.remove('hidden');
+                        } else {
+                            item.classList.add('hidden');
+                        }
+                    });
+                });
             });
+        });
+
+        // Case Studies Data
+        const caseStudies = {
+            'e-commerce-1': {
+                title: 'Online Fashion Store Case Study',
+                content: `
+                    <div class="space-y-6">
+                        <img src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg" 
+                             alt="E-commerce Case Study" 
+                             class="w-full rounded-lg">
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Challenge</h3>
+                            <p class="text-gray-600">The client needed to transform their traditional retail business into a modern e-commerce platform.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Solution</h3>
+                            <p class="text-gray-600">We implemented a full-scale e-commerce solution with advanced features including:</p>
+                            <ul class="list-disc list-inside mt-2 text-gray-600">
+                                <li>Mobile-first responsive design</li>
+                                <li>Advanced product filtering</li>
+                                <li>Integrated payment gateway</li>
+                                <li>Real-time inventory management</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Results</h3>
+                            <ul class="list-disc list-inside text-gray-600">
+                                <li>200% increase in online sales</li>
+                                <li>50% reduction in cart abandonment</li>
+                                <li>4.8/5 customer satisfaction rating</li>
+                            </ul>
+                        </div>
+                    </div>
+                `
+            },
+            'healthcare-1': {
+                title: 'Medical Center Website Case Study',
+                content: `
+                    <div class="space-y-6">
+                        <img src="https://images.pexels.com/photos/3182777/pexels-photo-3182777.jpeg" 
+                             alt="Healthcare Case Study" 
+                             class="w-full rounded-lg">
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Challenge</h3>
+                            <p class="text-gray-600">The medical center needed a modern website with patient portal integration.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Solution</h3>
+                            <p class="text-gray-600">We developed a comprehensive healthcare platform featuring:</p>
+                            <ul class="list-disc list-inside mt-2 text-gray-600">
+                                <li>Secure patient portal</li>
+                                <li>Online appointment scheduling</li>
+                                <li>Telemedicine integration</li>
+                                <li>Electronic health records access</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Results</h3>
+                            <ul class="list-disc list-inside text-gray-600">
+                                <li>30% reduction in administrative tasks</li>
+                                <li>95% patient satisfaction rate</li>
+                                <li>60% increase in online appointments</li>
+                            </ul>
+                        </div>
+                    </div>
+                `
+            },
+            'tech-1': {
+                title: 'Tech Startup Platform Case Study',
+                content: `
+                    <div class="space-y-6">
+                        <img src="https://images.pexels.com/photos/3182811/pexels-photo-3182811.jpeg" 
+                             alt="Technology Case Study" 
+                             class="w-full rounded-lg">
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Challenge</h3>
+                            <p class="text-gray-600">A tech startup needed a modern SaaS platform with intuitive UI/UX.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Solution</h3>
+                            <p class="text-gray-600">We created a comprehensive SaaS solution including:</p>
+                            <ul class="list-disc list-inside mt-2 text-gray-600">
+                                <li>Modern dashboard interface</li>
+                                <li>Real-time analytics</li>
+                                <li>API integration capabilities</li>
+                                <li>Automated reporting system</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Results</h3>
+                            <ul class="list-disc list-inside text-gray-600">
+                                <li>150% increase in user engagement</li>
+                                <li>40% reduction in onboarding time</li>
+                                <li>98% customer retention rate</li>
+                            </ul>
+                        </div>
+                    </div>
+                `
+            }
+        };
+
+        // Case Study Modal Functions
+        function showCaseStudy(id) {
+            const modal = document.getElementById('caseStudyModal');
+            const study = caseStudies[id];
+            
+            if (study) {
+                document.getElementById('modalTitle').textContent = study.title;
+                document.getElementById('modalContent').innerHTML = study.content;
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeCaseStudy() {
+            const modal = document.getElementById('caseStudyModal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        // Close modal on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeCaseStudy();
+        });
+
+        // Close modal when clicking outside
+        document.getElementById('caseStudyModal').addEventListener('click', (e) => {
+            if (e.target === e.currentTarget) closeCaseStudy();
         });
     </script>
 </body>
