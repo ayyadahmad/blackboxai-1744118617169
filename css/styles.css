@@ -1,0 +1,306 @@
+/* Base styles */
+:root {
+    --primary-color: #00FFA3;
+    --secondary-color: #0A2647;
+    --text-color: #333;
+    --light-text: #fff;
+    --gray-text: #6B7280;
+    --transition-speed: 0.3s;
+}
+
+/* Performance optimizations */
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+}
+
+/* Smooth scrolling with reduced motion preference */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+/* Typography */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+    color: var(--text-color);
+    overflow-x: hidden;
+    margin: 0;
+}
+
+/* Gradient text effect with fallback */
+.gradient-text {
+    background: linear-gradient(45deg, var(--primary-color), #4B79A1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--primary-color); /* Fallback */
+}
+
+/* Loading and transitions */
+.loading {
+    opacity: 0;
+    transition: opacity var(--transition-speed) ease-in-out;
+}
+
+.loaded {
+    opacity: 1;
+}
+
+/* Enhanced Mobile Menu */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--secondary-color);
+    transform: translateX(-100%);
+    transition: transform var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 50;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.mobile-menu.active {
+    transform: translateX(0);
+}
+
+/* Improved mobile menu backdrop */
+.mobile-menu::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity var(--transition-speed) ease;
+    pointer-events: none;
+}
+
+.mobile-menu.active::before {
+    opacity: 1;
+}
+
+/* Lazy loading images */
+.lazy-image {
+    transition: opacity var(--transition-speed) ease-in-out;
+    opacity: 0;
+    will-change: opacity;
+}
+
+.lazy-image.loaded {
+    opacity: 1;
+}
+
+/* Enhanced animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity var(--transition-speed) ease-in-out,
+                transform var(--transition-speed) ease-in-out;
+    will-change: opacity, transform;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Card hover effects */
+.hover-card {
+    transition: transform var(--transition-speed) ease,
+                box-shadow var(--transition-speed) ease;
+    will-change: transform, box-shadow;
+}
+
+.hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Button styles with improved interaction */
+.btn {
+    position: relative;
+    overflow: hidden;
+    transition: all var(--transition-speed) ease;
+    transform: translateZ(0);
+    will-change: transform, background-color;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.btn:hover::after {
+    width: 200%;
+    height: 200%;
+}
+
+/* Form styles with improved focus states */
+.form-input {
+    transition: border-color var(--transition-speed) ease,
+                box-shadow var(--transition-speed) ease;
+    will-change: border-color, box-shadow;
+}
+
+.form-input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 255, 163, 0.1);
+    outline: none;
+}
+
+/* Enhanced responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    h1, .text-5xl {
+        font-size: 2.5rem !important;
+        line-height: 1.2;
+    }
+    
+    h2, .text-4xl {
+        font-size: 2rem !important;
+        line-height: 1.3;
+    }
+    
+    h3, .text-3xl {
+        font-size: 1.75rem !important;
+    }
+    
+    h4, .text-2xl {
+        font-size: 1.5rem !important;
+    }
+    
+    p, .text-xl {
+        font-size: 1rem !important;
+    }
+
+    .grid {
+        grid-template-columns: repeat(1, 1fr) !important;
+        gap: 1.5rem !important;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Grid system with improved breakpoints */
+.grid {
+    display: grid;
+    gap: 2rem;
+}
+
+@media (min-width: 640px) {
+    .grid-cols-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .grid-cols-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid-cols-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Performance optimizations for animations */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .fade-in {
+        opacity: 1;
+        transform: none;
+    }
+
+    .hover-card:hover {
+        transform: none;
+    }
+}
+
+/* Loading spinner */
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(0, 255, 163, 0.1);
+    border-left-color: var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    will-change: transform;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Utility classes */
+.backdrop-blur {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.text-balance {
+    text-wrap: balance;
+}
+
+/* Improved accessibility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    body {
+        color: #000;
+        background: #fff;
+    }
+}
