@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Digital Marketing Agency</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .service-card:hover .icon-circle {
+            transform: scale(1.1);
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #00FFA3, #4B79A1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="font-[Poppins] bg-white text-gray-800">
+    <header class="fixed w-full top-0 z-50 bg-[#0A2647]/95 backdrop-blur-sm">
+        <!-- Navigation Bar -->
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-white text-2xl font-bold">
+                    Digital<span class="text-[#00FFA3]">Agency</span>
+                </a>
+                <ul class="hidden md:flex space-x-8">
+                    <li><a href="index.html" class="text-white hover:text-[#00FFA3] transition-colors">Home</a></li>
+                    <li><a href="services.html" class="text-[#00FFA3] font-medium">Services</a></li>
+                    <li><a href="portfolio.html" class="text-white hover:text-[#00FFA3] transition-colors">Portfolio</a></li>
+                    <li><a href="careers.html" class="text-white hover:text-[#00FFA3] transition-colors">Careers</a></li>
+                    <li><a href="about.html" class="text-white hover:text-[#00FFA3] transition-colors">About Us</a></li>
+                    <li><a href="blog.html" class="text-white hover:text-[#00FFA3] transition-colors">Blog</a></li>
+                    <li><a href="contact.html" class="text-white hover:text-[#00FFA3] transition-colors">Contact</a></li>
+                </ul>
+                <button class="md:hidden text-white">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative py-20 bg-[#0A2647]">
+            <div class="absolute inset-0 overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-r from-[#0A2647] to-transparent"></div>
+                <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg" 
+                     alt="Services Background" 
+                     class="w-full h-full object-cover opacity-20">
+            </div>
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h1 class="text-5xl font-bold text-white mb-6">
+                        Our <span class="gradient-text">Services</span>
+                    </h1>
+                    <p class="text-xl text-gray-300">
+                        Comprehensive digital solutions tailored to your business needs
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Grid -->
+        <section class="py-20">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- SEO Service -->
+                    <div class="service-card bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all">
+                        <div class="icon-circle w-16 h-16 bg-[#00FFA3]/10 rounded-full flex items-center justify-center mb-6 transition-transform">
+                            <i class="fas fa-search text-[#00FFA3] text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Search Engine Optimization</h3>
+                        <p class="text-gray-600 mb-6">Boost your website's visibility and rank higher in search results.</p>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-[#00FFA3] mr-2"></i>
+                                Keyword Research & Analysis
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-[#00FFA3] mr-2"></i>
+                                On-Page SEO Optimization
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-[#00FFA3] mr-2"></i>
+                                Link Building Strategies
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="inline-block px-6 py-3 bg-[#00FFA3] text-gray-900 rounded-lg font-semibold hover:bg-[#00FFA3]/90 transition-colors">
+                            Learn More
+                        </a>
+                    </div>
+
+                    <!-- PPC Service -->
+                    <div class="service-card bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all">
+                        <div class="icon-circle w-16 h-16 bg-[#00FFA3]/10 rounded-full flex items-center justify-center mb-6 transition-transform">
+                            <i class="fas fa-ad text-[#00FFA3] text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Pay-Per-Click Advertising</h3>
+                        <p class="text-gray-600 mb-6">Maximize ROI with targeted paid advertising campaigns.</p>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-[#00FFA3] mr-2"></i>
+                                Google Ads Management
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-[#00FFA3] mr-2"></i>
+                                Social Media Advertising
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-[#00FFA3] mr-2"></i>
+                                Display & Remarketing
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="inline-block px-6 py-3 bg-[#00FFA3] text-gray-900 rounded-lg font-semibold hover:bg-[#00FFA3]/90 transition-colors">
+                            Learn More
+                        </a>
+                    </div>
+
+                    <!-- Social Media Service -->
+                    <div class="service-card bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all">
+                        <div class="icon-circle w-16 h-16 bg-[#00FFA3]/10 rounded-full flex items-center justify-center mb-6 transition-transform">
+                            <i class="fas fa-share-alt text-[#00FFA3] text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Social Media Marketing</h3>
+                        <p class="text-gray-600 mb-6">Engage your audience across all social platforms.</p>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-[#00FFA3] mr-2"></i>
+                                Content Strategy & Creation
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-[#00FFA3] mr-2"></i>
+                                Community Management
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-[#00FFA3] mr-2"></i>
+                                Analytics & Reporting
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="inline-block px-6 py-3 bg-[#00FFA3] text-gray-900 rounded-lg font-semibold hover:bg-[#00FFA3]/90 transition-colors">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Services -->
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center mb-16">Additional Services</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                        <i class="fas fa-pen-fancy text-[#00FFA3] text-3xl mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Content Marketing</h3>
+                        <p class="text-gray-600">Create engaging content that resonates with your audience.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                        <i class="fas fa-chart-line text-[#00FFA3] text-3xl mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Analytics & Reporting</h3>
+                        <p class="text-gray-600">Data-driven insights to optimize your campaigns.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                        <i class="fas fa-envelope text-[#00FFA3] text-3xl mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Email Marketing</h3>
+                        <p class="text-gray-600">Targeted email campaigns that convert.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                        <i class="fas fa-mobile-alt text-[#00FFA3] text-3xl mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Mobile Marketing</h3>
+                        <p class="text-gray-600">Reach customers on their preferred devices.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center mb-16">Our Process</h2>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-[#00FFA3]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl font-bold text-[#00FFA3]">1</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Discovery</h3>
+                        <p class="text-gray-600">Understanding your business goals and challenges</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-[#00FFA3]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl font-bold text-[#00FFA3]">2</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Strategy</h3>
+                        <p class="text-gray-600">Developing a customized action plan</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-[#00FFA3]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl font-bold text-[#00FFA3]">3</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Implementation</h3>
+                        <p class="text-gray-600">Executing the strategy with precision</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-[#00FFA3]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl font-bold text-[#00FFA3]">4</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Optimization</h3>
+                        <p class="text-gray-600">Continuous improvement and refinement</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-[#0A2647]">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-4xl font-bold text-white mb-8">Ready to Transform Your Digital Presence?</h2>
+                <p class="text-xl text-gray-300 mb-8">Let's discuss how we can help you achieve your goals</p>
+                <a href="contact.html" 
+                   class="inline-block px-8 py-4 bg-[#00FFA3] text-gray-900 rounded-full font-semibold hover:bg-[#00FFA3]/90 transition-colors">
+                    Get Started Now
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#0A2647] text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Digital<span class="text-[#00FFA3]">Agency</span></h3>
+                    <p class="text-gray-400">Transform your digital presence with our innovative solutions.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-[#00FFA3]">About Us</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-[#00FFA3]">Services</a></li>
+                        <li><a href="portfolio.html" class="text-gray-400 hover:text-[#00FFA3]">Portfolio</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-[#00FFA3]">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-[#00FFA3]"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-[#00FFA3]"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-[#00FFA3]"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-[#00FFA3]"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Newsletter</h4>
+                    <form class="space-y-4">
+                        <input type="email" 
+                               placeholder="Enter your email" 
+                               class="w-full px-4 py-2 bg-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00FFA3]">
+                        <button type="submit" 
+                                class="w-full px-4 py-2 bg-[#00FFA3] text-gray-900 rounded-lg font-semibold hover:bg-[#00FFA3]/90">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-white/10 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Digital Marketing Agency. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
