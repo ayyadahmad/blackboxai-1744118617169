@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Digital Marketing Agency</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .gradient-text {
+            background: linear-gradient(45deg, #00FFA3, #4B79A1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .blog-card {
+            transition: transform 0.3s ease;
+        }
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="font-[Poppins] bg-white text-gray-800">
+    <header class="fixed w-full top-0 z-50 bg-[#0A2647]/95 backdrop-blur-sm">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-white text-2xl font-bold">
+                    Digital<span class="text-[#00FFA3]">Agency</span>
+                </a>
+                <ul class="hidden md:flex space-x-8">
+                    <li><a href="index.html" class="text-white hover:text-[#00FFA3] transition-colors">Home</a></li>
+                    <li><a href="services.html" class="text-white hover:text-[#00FFA3] transition-colors">Services</a></li>
+                    <li><a href="portfolio.html" class="text-white hover:text-[#00FFA3] transition-colors">Portfolio</a></li>
+                    <li><a href="careers.html" class="text-white hover:text-[#00FFA3] transition-colors">Careers</a></li>
+                    <li><a href="about.html" class="text-white hover:text-[#00FFA3] transition-colors">About Us</a></li>
+                    <li><a href="blog.html" class="text-[#00FFA3] font-medium">Blog</a></li>
+                    <li><a href="contact.html" class="text-white hover:text-[#00FFA3] transition-colors">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative py-20 bg-[#0A2647]">
+            <div class="absolute inset-0 overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-r from-[#0A2647] to-transparent"></div>
+                <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg" 
+                     alt="Blog Background" 
+                     class="w-full h-full object-cover opacity-20">
+            </div>
+            <div class="container mx-auto px-4 relative z-10 text-center">
+                <h1 class="text-5xl font-bold text-white mb-6">
+                    Our <span class="gradient-text">Blog</span>
+                </h1>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                    Insights, trends, and strategies in digital marketing
+                </p>
+            </div>
+        </section>
+
+        <!-- Featured Post -->
+        <section class="py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold mb-12">Featured Post</h2>
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden">
+                    <div class="grid grid-cols-1 md:grid-cols-2">
+                        <img src="https://images.pexels.com/photos/3183132/pexels-photo-3183132.jpeg" 
+                             alt="Featured post" 
+                             class="w-full h-96 object-cover">
+                        <div class="p-8 flex flex-col justify-center">
+                            <div class="flex items-center mb-4">
+                                <span class="px-3 py-1 bg-[#00FFA3]/10 text-[#00FFA3] rounded-full text-sm">
+                                    Digital Marketing
+                                </span>
+                                <span class="text-gray-500 ml-4">5 min read</span>
+                            </div>
+                            <h3 class="text-3xl font-bold mb-4">The Future of AI in Digital Marketing</h3>
+                            <p class="text-gray-600 mb-6">
+                                Explore how artificial intelligence is revolutionizing the digital marketing landscape and what it means for businesses.
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" 
+                                         alt="Author" 
+                                         class="w-10 h-10 rounded-full object-cover mr-3">
+                                    <div>
+                                        <div class="font-semibold">John Smith</div>
+                                        <div class="text-gray-500 text-sm">Marketing Director</div>
+                                    </div>
+                                </div>
+                                <a href="#" class="text-[#00FFA3] font-semibold hover:text-[#00FFA3]/80">
+                                    Read More <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories and Latest Posts -->
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <!-- Categories Sidebar -->
+                    <div class="md:col-span-1">
+                        <div class="bg-white p-6 rounded-xl shadow-lg">
+                            <h3 class="text-xl font-bold mb-6">Categories</h3>
+                            <ul class="space-y-4">
+                                <li>
+                                    <a href="#" class="flex items-center justify-between text-gray-600 hover:text-[#00FFA3]">
+                                        Digital Marketing
+                                        <span class="bg-gray-100 px-2 py-1 rounded-full text-sm">12</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex items-center justify-between text-gray-600 hover:text-[#00FFA3]">
+                                        SEO
+                                        <span class="bg-gray-100 px-2 py-1 rounded-full text-sm">8</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex items-center justify-between text-gray-600 hover:text-[#00FFA3]">
+                                        Content Strategy
+                                        <span class="bg-gray-100 px-2 py-1 rounded-full text-sm">15</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex items-center justify-between text-gray-600 hover:text-[#00FFA3]">
+                                        Social Media
+                                        <span class="bg-gray-100 px-2 py-1 rounded-full text-sm">10</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Latest Posts -->
+                    <div class="md:col-span-3">
+                        <h3 class="text-2xl font-bold mb-8">Latest Posts</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <!-- Blog Post Card -->
+                            <div class="blog-card bg-white rounded-xl shadow-lg overflow-hidden">
+                                <img src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg" 
+                                     alt="Blog post" 
+                                     class="w-full h-48 object-cover">
+                                <div class="p-6">
+                                    <div class="flex items-center mb-4">
+                                        <span class="px-3 py-1 bg-[#00FFA3]/10 text-[#00FFA3] rounded-full text-sm">
+                                            SEO
+                                        </span>
+                                        <span class="text-gray-500 ml-4">3 min read</span>
+                                    </div>
+                                    <h4 class="text-xl font-bold mb-2">SEO Trends to Watch in 2024</h4>
+                                    <p class="text-gray-600 mb-4">
+                                        Stay ahead of the curve with these emerging SEO trends that will shape the future of search.
+                                    </p>
+                                    <a href="#" class="text-[#00FFA3] font-semibold hover:text-[#00FFA3]/80">
+                                        Read More <i class="fas fa-arrow-right ml-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Blog Post Card -->
+                            <div class="blog-card bg-white rounded-xl shadow-lg overflow-hidden">
+                                <img src="https://images.pexels.com/photos/3182777/pexels-photo-3182777.jpeg" 
+                                     alt="Blog post" 
+                                     class="w-full h-48 object-cover">
+                                <div class="p-6">
+                                    <div class="flex items-center mb-4">
+                                        <span class="px-3 py-1 bg-[#00FFA3]/10 text-[#00FFA3] rounded-full text-sm">
+                                            Social Media
+                                        </span>
+                                        <span class="text-gray-500 ml-4">4 min read</span>
+                                    </div>
+                                    <h4 class="text-xl font-bold mb-2">Mastering Social Media Marketing</h4>
+                                    <p class="text-gray-600 mb-4">
+                                        Learn the essential strategies for building a strong social media presence.
+                                    </p>
+                                    <a href="#" class="text-[#00FFA3] font-semibold hover:text-[#00FFA3]/80">
+                                        Read More <i class="fas fa-arrow-right ml-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Blog Post Card -->
+                            <div class="blog-card bg-white rounded-xl shadow-lg overflow-hidden">
+                                <img src="https://images.pexels.com/photos/3182811/pexels-photo-3182811.jpeg" 
+                                     alt="Blog post" 
+                                     class="w-full h-48 object-cover">
+                                <div class="p-6">
+                                    <div class="flex items-center mb-4">
+                                        <span class="px-3 py-1 bg-[#00FFA3]/10 text-[#00FFA3] rounded-full text-sm">
+                                            Content Strategy
+                                        </span>
+                                        <span class="text-gray-500 ml-4">6 min read</span>
+                                    </div>
+                                    <h4 class="text-xl font-bold mb-2">Creating Engaging Content</h4>
+                                    <p class="text-gray-600 mb-4">
+                                        Discover the secrets to creating content that resonates with your audience.
+                                    </p>
+                                    <a href="#" class="text-[#00FFA3] font-semibold hover:text-[#00FFA3]/80">
+                                        Read More <i class="fas fa-arrow-right ml-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Blog Post Card -->
+                            <div class="blog-card bg-white rounded-xl shadow-lg overflow-hidden">
+                                <img src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg" 
+                                     alt="Blog post" 
+                                     class="w-full h-48 object-cover">
+                                <div class="p-6">
+                                    <div class="flex items-center mb-4">
+                                        <span class="px-3 py-1 bg-[#00FFA3]/10 text-[#00FFA3] rounded-full text-sm">
+                                            Digital Marketing
+                                        </span>
+                                        <span class="text-gray-500 ml-4">5 min read</span>
+                                    </div>
+                                    <h4 class="text-xl font-bold mb-2">Digital Marketing ROI</h4>
+                                    <p class="text-gray-600 mb-4">
+                                        Learn how to measure and maximize your digital marketing return on investment.
+                                    </p>
+                                    <a href="#" class="text-[#00FFA3] font-semibold hover:text-[#00FFA3]/80">
+                                        Read More <i class="fas fa-arrow-right ml-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="py-20">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-4xl font-bold mb-8">Subscribe to Our Newsletter</h2>
+                <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                    Get the latest insights and trends in digital marketing delivered straight to your inbox.
+                </p>
+                <form class="max-w-md mx-auto">
+                    <div class="flex gap-4">
+                        <input type="email" 
+                               placeholder="Enter your email" 
+                               class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00FFA3]">
+                        <button type="submit" 
+                                class="px-6 py-3 bg-[#00FFA3] text-gray-900 rounded-lg font-semibold hover:bg-[#00FFA3]/90">
+                            Subscribe
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#0A2647] text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Digital<span class="text-[#00FFA3]">Agency</span></h3>
+                    <p class="text-gray-400">Transform your digital presence with our innovative solutions.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-[#00FFA3]">About Us</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-[#00FFA3]">Services</a></li>
+                        <li><a href="portfolio.html" class="text-gray-400 hover:text-[#00FFA3]">Portfolio</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-[#00FFA3]">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-[#00FFA3]"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-[#00FFA3]"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-[#00FFA3]"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-[#00FFA3]"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Newsletter</h4>
+                    <form class="space-y-4">
+                        <input type="email" 
+                               placeholder="Enter your email" 
+                               class="w-full px-4 py-2 bg-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00FFA3]">
+                        <button type="submit" 
+                                class="w-full px-4 py-2 bg-[#00FFA3] text-gray-900 rounded-lg font-semibold hover:bg-[#00FFA3]/90">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-white/10 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Digital Marketing Agency. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
